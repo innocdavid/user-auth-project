@@ -2,15 +2,17 @@
 const express = require('express');
 require('dotenv').config();
 require('./db/db')
+
+// instantiating express
 const app = express();
 
-//setting routes
+// setting routes
 app.get('/', (req, res) => {
   res.send('Hello from the server');
 });
 
 // data
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 const hostname = process.env.HOSTNAME;
 
 // server listening
