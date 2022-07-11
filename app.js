@@ -6,16 +6,17 @@ require('./db/db')
 // instantiating express
 const app = express();
 
+// setting up routes
+const registerRoute = require('./routes/register');
+
 // MIDDLEWARE
 app.use(express.json());
 
 // setting routes
-app.get('/', (req, res) => {
-  res.send('Hello from the server');
-});
+app.use('/register', registerRoute);
 
 // data
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 const hostname = process.env.HOSTNAME;
 
 // server listening
