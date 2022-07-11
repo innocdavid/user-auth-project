@@ -6,6 +6,9 @@ require('./db/db')
 // instantiating express
 const app = express();
 
+// MIDDLEWARE
+app.use(express.json());
+
 // setting routes
 app.get('/', (req, res) => {
   res.send('Hello from the server');
